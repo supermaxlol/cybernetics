@@ -51,4 +51,6 @@ import FiveOrgans.MarkovOrder
 import FiveOrgans.MarkovOrderK
 import FiveOrgans.RandomCount
 import FiveOrgans.FadingMemory
+import FiveOrgans.BlockConcentration
+import FiveOrgans.CanonicalAgent
 import FiveOrgans.Audit

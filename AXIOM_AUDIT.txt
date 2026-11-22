@@ -1,5 +1,5 @@
-== FiveOrgans.FadingMemory
-== FiveOrgans.RandomCount
+== FiveOrgans.BlockConcentration
+== FiveOrgans.CanonicalAgent
 == FiveOrgans.Audit
 'FiveOrgans.Memory.separates' does not depend on any axioms
 'FiveOrgans.Memory.memoryless_fails' does not depend on any axioms
@@ -359,4 +359,31 @@
 'FiveOrgans.FadingMemory.memory_var_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
 'FiveOrgans.FadingMemory.window_fading_sv' depends on axioms: [propext, Classical.choice, Quot.sound]
 'FiveOrgans.FadingMemory.geometric_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.blkErr_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.defect_transfer_blk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.certified_transfer_blk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.data_test_blk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.split_rejects_blk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.split_refutes_lumpable_blk' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.ind_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.emp_map' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.blk_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.blk_rows_random' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.blk_delta_solves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BlockConcentration.blk_rows_alpha' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.surv_merge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.mergeHz_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.le_mergeHz_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.le_mergeHz_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.watchHz_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.watch_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.canonical_viable' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.canon_skin_kills' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.memory_part_kills' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.memory_one_rate_kills' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.memory_memoryless_kills' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.canon_spot_kills' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.canon_brake_kills' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.static_watcher_kills' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.CanonicalAgent.canonical_instance' depends on axioms: [propext, Classical.choice, Quot.sound]
 OK

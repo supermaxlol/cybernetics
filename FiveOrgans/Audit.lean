@@ -50,6 +50,8 @@ import FiveOrgans.MarkovOrder
 import FiveOrgans.MarkovOrderK
 import FiveOrgans.RandomCount
 import FiveOrgans.FadingMemory
+import FiveOrgans.BlockConcentration
+import FiveOrgans.CanonicalAgent
 
 open FiveOrgans
 
@@ -411,3 +413,30 @@ open FiveOrgans
 #print axioms FiveOrgans.FadingMemory.memory_var_bound
 #print axioms FiveOrgans.FadingMemory.window_fading_sv
 #print axioms FiveOrgans.FadingMemory.geometric_order
+#print axioms FiveOrgans.BlockConcentration.blkErr_le
+#print axioms FiveOrgans.BlockConcentration.defect_transfer_blk
+#print axioms FiveOrgans.BlockConcentration.certified_transfer_blk
+#print axioms FiveOrgans.BlockConcentration.data_test_blk
+#print axioms FiveOrgans.BlockConcentration.split_rejects_blk
+#print axioms FiveOrgans.BlockConcentration.split_refutes_lumpable_blk
+#print axioms FiveOrgans.BlockConcentration.ind_map
+#print axioms FiveOrgans.BlockConcentration.emp_map
+#print axioms FiveOrgans.BlockConcentration.blk_tail
+#print axioms FiveOrgans.BlockConcentration.blk_rows_random
+#print axioms FiveOrgans.BlockConcentration.blk_delta_solves
+#print axioms FiveOrgans.BlockConcentration.blk_rows_alpha
+#print axioms FiveOrgans.CanonicalAgent.surv_merge
+#print axioms FiveOrgans.CanonicalAgent.mergeHz_mem
+#print axioms FiveOrgans.CanonicalAgent.le_mergeHz_left
+#print axioms FiveOrgans.CanonicalAgent.le_mergeHz_right
+#print axioms FiveOrgans.CanonicalAgent.watchHz_mem
+#print axioms FiveOrgans.CanonicalAgent.watch_budget
+#print axioms FiveOrgans.CanonicalAgent.canonical_viable
+#print axioms FiveOrgans.CanonicalAgent.canon_skin_kills
+#print axioms FiveOrgans.CanonicalAgent.memory_part_kills
+#print axioms FiveOrgans.CanonicalAgent.memory_one_rate_kills
+#print axioms FiveOrgans.CanonicalAgent.memory_memoryless_kills
+#print axioms FiveOrgans.CanonicalAgent.canon_spot_kills
+#print axioms FiveOrgans.CanonicalAgent.canon_brake_kills
+#print axioms FiveOrgans.CanonicalAgent.static_watcher_kills
+#print axioms FiveOrgans.CanonicalAgent.canonical_instance
