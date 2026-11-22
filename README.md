@@ -6,7 +6,7 @@ spotlight (limited attention), and how these combine. A second half asks when a 
 macro-level model can stand in for a fine, micro-level one (the cross-scale map φ), and gives
 statistical tests of that, with their error rates proved.
 
-**454 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
+**459 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
 (see `AXIOM_AUDIT.txt`, produced by `#print axioms` on every theorem listed in
 `FiveOrgans/Audit.lean`).
 
@@ -88,6 +88,7 @@ PoissonRandom.lean      the KL tests with random visit counts 1..T: cost log(4T/
 PoissonFlip.lean        p near 1: the Poisson test on X and on 1 − X (≤ 8e^{−L})
 BernKL.lean             Bernoulli relative-entropy (Chernoff–Hoeffding KL) bound P(p̂ ≥ a) ≤ exp(−N·kl(a‖p)); symmetric (binKL_symm), sharper than Poisson (poisKL_le_binKL); confidence sets, two-sample test, random counts
 BennettDiff.lean        direct two-sample difference test on p̂₁ − p̂₂ (no interval overlap): weighted mgf tails (wtail, wtail_bern), exact Bernoulli log-mgf ψ_q(x) = log(1+q(eˣ−1)) − qx with variance q(1−q); unknown p via the pooled KL set; false rejection ≤ 2e^{−L} + 2e^{−A} (bern_diff_two_sample). Assumes all draws independent with one mean
+BennettRandom.lean      the direct test with random visit counts: arms are prefixes of the even/odd draws of one independent sequence; union over count pairs (bern_diff_random); counts in 1..T: L = log(8T/α), A = log(4T²/α) ≤ α (bern_diff_random_alpha). Valid but conservative
 CrossScaleLongRun.lean  non-contracting macro (L=1): per-step error η gives drift nη; no margin licenses a lifetime verdict
 OpenWorld.lean          "exactly five" is not a theorem: no finite organ list is complete for an open world class; relative completeness in a closed one
 SpotlightEntropy.lean   entropy information cost: softmax optimal, payoff loss ≤ λ log n, never a perfect spotlight; random error costs ≤ 2C·E[e]
@@ -113,7 +114,7 @@ false-rejection bound under independent draws with a common mean.
 | Hoeffding on p̂₁ − p̂₂ | `DiffContrast.diff_tail` | p near 1/2; any dependence between the two samples allowed |
 | KL interval overlap | `BernKL.kl_two_sample_bern` | rare outcomes; any dependence between the two samples allowed |
 | Direct Bernoulli-mgf difference | `BennettDiff.bern_diff_two_sample` | most cases (variance q(1−q)); needs all draws jointly independent |
-| Random counts | `BernKL.kl_two_sample_bern_random_alpha`, `RandomCount.random_diff_alpha` | visit counts not fixed in advance |
+| Random counts | `BennettRandom.bern_diff_random_alpha`, `BernKL.kl_two_sample_bern_random_alpha`, `RandomCount.random_diff_alpha` | visit counts not fixed in advance; all pay a union bound over counts and are conservative |
 
 A simulation on known Markov chains (private working folder, exploratory, not part of this
 repository) found the direct Bernoulli-mgf test the most powerful of these in every scenario tried.

@@ -58,6 +58,7 @@ import FiveOrgans.PoissonRandom
 import FiveOrgans.PoissonFlip
 import FiveOrgans.BernKL
 import FiveOrgans.BennettDiff
+import FiveOrgans.BennettRandom
 
 open FiveOrgans
 
@@ -517,3 +518,10 @@ open FiveOrgans
 #print axioms FiveOrgans.BennettDiff.scaled_tail_bern
 #print axioms FiveOrgans.BennettDiff.bern_diff_test
 #print axioms FiveOrgans.BennettDiff.bern_diff_two_sample
+
+-- BennettRandom
+#print axioms FiveOrgans.BennettRandom.sum_range_two_mul
+#print axioms FiveOrgans.BennettRandom.ew_stat
+#print axioms FiveOrgans.BennettRandom.ew_sum
+#print axioms FiveOrgans.BennettRandom.bern_diff_random
+#print axioms FiveOrgans.BennettRandom.bern_diff_random_alpha

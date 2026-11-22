@@ -1,4 +1,4 @@
-== FiveOrgans.BennettDiff
+== FiveOrgans.BennettRandom
 == FiveOrgans.Audit
 'FiveOrgans.Memory.separates' does not depend on any axioms
 'FiveOrgans.Memory.memoryless_fails' does not depend on any axioms
@@ -454,4 +454,9 @@
 'FiveOrgans.BennettDiff.scaled_tail_bern' depends on axioms: [propext, Classical.choice, Quot.sound]
 'FiveOrgans.BennettDiff.bern_diff_test' depends on axioms: [propext, Classical.choice, Quot.sound]
 'FiveOrgans.BennettDiff.bern_diff_two_sample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BennettRandom.sum_range_two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BennettRandom.ew_stat' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BennettRandom.ew_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BennettRandom.bern_diff_random' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FiveOrgans.BennettRandom.bern_diff_random_alpha' depends on axioms: [propext, Classical.choice, Quot.sound]
 OK

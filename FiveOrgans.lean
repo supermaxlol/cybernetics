@@ -59,4 +59,5 @@ import FiveOrgans.PoissonRandom
 import FiveOrgans.PoissonFlip
 import FiveOrgans.BernKL
 import FiveOrgans.BennettDiff
+import FiveOrgans.BennettRandom
 import FiveOrgans.Audit
