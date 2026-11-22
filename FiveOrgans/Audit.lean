@@ -52,6 +52,12 @@ import FiveOrgans.RandomCount
 import FiveOrgans.FadingMemory
 import FiveOrgans.BlockConcentration
 import FiveOrgans.CanonicalAgent
+import FiveOrgans.PoissonTail
+import FiveOrgans.PoissonConf
+import FiveOrgans.PoissonRandom
+import FiveOrgans.PoissonFlip
+import FiveOrgans.BernKL
+import FiveOrgans.BennettDiff
 
 open FiveOrgans
 
@@ -440,3 +446,74 @@ open FiveOrgans
 #print axioms FiveOrgans.CanonicalAgent.canon_brake_kills
 #print axioms FiveOrgans.CanonicalAgent.static_watcher_kills
 #print axioms FiveOrgans.CanonicalAgent.canonical_instance
+#print axioms FiveOrgans.PoissonTail.exp_le_chord
+#print axioms FiveOrgans.PoissonTail.integrable_exp
+#print axioms FiveOrgans.PoissonTail.mgf_le
+#print axioms FiveOrgans.PoissonTail.mgf_sum_le
+#print axioms FiveOrgans.PoissonTail.upper_tail
+#print axioms FiveOrgans.PoissonTail.lower_tail
+#print axioms FiveOrgans.PoissonTail.upper_opt
+#print axioms FiveOrgans.PoissonTail.lower_opt
+#print axioms FiveOrgans.PoissonTail.poisKL_alpha
+#print axioms FiveOrgans.PoissonTail.upper_alpha
+#print axioms FiveOrgans.PoissonTail.lower_alpha
+#print axioms FiveOrgans.PoissonTail.two_sided_alpha
+#print axioms FiveOrgans.PoissonTail.poisKL_ge
+#print axioms FiveOrgans.PoissonTail.beats_hoeffding
+#print axioms FiveOrgans.PoissonConf.poisKL_eq
+#print axioms FiveOrgans.PoissonConf.poisKL_cont
+#print axioms FiveOrgans.PoissonConf.poisKL_zero
+#print axioms FiveOrgans.PoissonConf.kl_upper
+#print axioms FiveOrgans.PoissonConf.lower_zero
+#print axioms FiveOrgans.PoissonConf.kl_lower
+#print axioms FiveOrgans.PoissonConf.kl_conf
+#print axioms FiveOrgans.PoissonConf.exp_neg_log
+#print axioms FiveOrgans.PoissonConf.kl_conf_alpha
+#print axioms FiveOrgans.PoissonConf.kl_two_sample
+#print axioms FiveOrgans.PoissonConf.kl_two_sample_alpha
+#print axioms FiveOrgans.PoissonRandom.kl_conf_random
+#print axioms FiveOrgans.PoissonRandom.card_Icc_one
+#print axioms FiveOrgans.PoissonRandom.pos_of_Icc
+#print axioms FiveOrgans.PoissonRandom.kl_conf_random_alpha
+#print axioms FiveOrgans.PoissonRandom.kl_two_sample_random
+#print axioms FiveOrgans.PoissonRandom.kl_two_sample_random_alpha
+#print axioms FiveOrgans.PoissonFlip.flip_measurable
+#print axioms FiveOrgans.PoissonFlip.flip_indep
+#print axioms FiveOrgans.PoissonFlip.flip_range
+#print axioms FiveOrgans.PoissonFlip.flip_mean
+#print axioms FiveOrgans.PoissonFlip.kl_two_sample_flip
+#print axioms FiveOrgans.PoissonFlip.kl_two_sample_flip_alpha
+#print axioms FiveOrgans.BernKL.mgf_le_bern
+#print axioms FiveOrgans.BernKL.bern_pos
+#print axioms FiveOrgans.BernKL.mgf_sum_bern
+#print axioms FiveOrgans.BernKL.sum_range_mem
+#print axioms FiveOrgans.BernKL.upper_tail_bern
+#print axioms FiveOrgans.BernKL.binKL_symm
+#print axioms FiveOrgans.BernKL.upper_opt_bern
+#print axioms FiveOrgans.BernKL.binKL_one
+#print axioms FiveOrgans.BernKL.upper_one_bern
+#print axioms FiveOrgans.BernKL.binKL_cont
+#print axioms FiveOrgans.BernKL.poisKL_le_binKL
+#print axioms FiveOrgans.BernKL.kl_upper_bern
+#print axioms FiveOrgans.BernKL.flip_avg
+#print axioms FiveOrgans.BernKL.kl_lower_bern
+#print axioms FiveOrgans.BernKL.kl_conf_bern
+#print axioms FiveOrgans.BernKL.kl_conf_bern_alpha
+#print axioms FiveOrgans.BernKL.kl_two_sample_bern
+#print axioms FiveOrgans.BernKL.kl_two_sample_bern_alpha
+#print axioms FiveOrgans.BernKL.kl_conf_bern_random
+#print axioms FiveOrgans.BernKL.kl_two_sample_bern_random_alpha
+
+-- BennettDiff
+#print axioms FiveOrgans.BennettDiff.phi_nonneg
+#print axioms FiveOrgans.BennettDiff.wtail
+#print axioms FiveOrgans.BennettDiff.wtail_flip
+#print axioms FiveOrgans.BennettDiff.scaled_tail
+#print axioms FiveOrgans.BennettDiff.bennett_test
+#print axioms FiveOrgans.BennettDiff.tw_stat
+#print axioms FiveOrgans.BennettDiff.tw_sum
+#print axioms FiveOrgans.BennettDiff.bennett_two_sample
+#print axioms FiveOrgans.BennettDiff.wtail_bern
+#print axioms FiveOrgans.BennettDiff.scaled_tail_bern
+#print axioms FiveOrgans.BennettDiff.bern_diff_test
+#print axioms FiveOrgans.BennettDiff.bern_diff_two_sample

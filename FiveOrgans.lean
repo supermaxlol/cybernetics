@@ -53,4 +53,10 @@ import FiveOrgans.RandomCount
 import FiveOrgans.FadingMemory
 import FiveOrgans.BlockConcentration
 import FiveOrgans.CanonicalAgent
+import FiveOrgans.PoissonTail
+import FiveOrgans.PoissonConf
+import FiveOrgans.PoissonRandom
+import FiveOrgans.PoissonFlip
+import FiveOrgans.BernKL
+import FiveOrgans.BennettDiff
 import FiveOrgans.Audit
