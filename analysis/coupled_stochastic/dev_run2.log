@@ -1,0 +1,22 @@
+selftest OK: generalised worst-case projection == Lean tables (7 envs x 32 configs)
+atlas 0/200 0s
+atlas 50/200 20s
+atlas 100/200 44s
+atlas 150/200 64s
+scaling done 306s
+pop done 404s
+wrote stoch_dev_raw.json in 404s
+H10a_pass False
+H10b_pass False
+H10c_pass True
+H11_pass False
+H12_pass False
+H1_pass True
+H2_pass True
+H3_pass True
+H5_pass True
+H6_pass False
+H7_pass False
+H8_pass False
+H9_pass False
+DONE

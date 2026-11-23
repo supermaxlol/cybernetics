@@ -70,6 +70,8 @@ import FiveOrgans.CoupledAblation
 import FiveOrgans.CoupledTransfer
 import FiveOrgans.CoupledRoles
 import FiveOrgans.CoupledPartial
+import FiveOrgans.CoupledStochastic
+import FiveOrgans.CoupledEndogenous
 
 open FiveOrgans
 
@@ -719,3 +721,45 @@ open FiveOrgans
 #print axioms FiveOrgans.CoupledPartial.resist_iff
 #print axioms FiveOrgans.CoupledPartial.brake_resistance_nodelay
 #print axioms FiveOrgans.CoupledPartial.perturbed_loop
+#print axioms FiveOrgans.CoupledStochastic.resp_reflect
+#print axioms FiveOrgans.CoupledStochastic.sq_reflect
+#print axioms FiveOrgans.CoupledStochastic.memLp_resp
+#print axioms FiveOrgans.CoupledStochastic.var_resp_eq
+#print axioms FiveOrgans.CoupledStochastic.var_resp
+#print axioms FiveOrgans.CoupledStochastic.mean_resp
+#print axioms FiveOrgans.CoupledStochastic.cheb_resp
+#print axioms FiveOrgans.CoupledStochastic.xC_shock
+#print axioms FiveOrgans.CoupledEndogenous.step_lower
+#print axioms FiveOrgans.CoupledEndogenous.rate_impossible
+#print axioms FiveOrgans.CoupledEndogenous.clip_abs
+#print axioms FiveOrgans.CoupledEndogenous.rate_sufficient
+#print axioms FiveOrgans.CoupledEndogenous.clipPath_is_path
+#print axioms FiveOrgans.CoupledEndogenous.rate_iff
+#print axioms FiveOrgans.CoupledEndogenous.rate_iff_exogenous
+#print axioms FiveOrgans.CoupledEndogenous.regen_closed
+#print axioms FiveOrgans.CoupledEndogenous.eventually_neg
+#print axioms FiveOrgans.CoupledEndogenous.depletion_kills
+#print axioms FiveOrgans.CoupledEndogenous.static_not_recursive
+#print axioms FiveOrgans.CoupledEndogenous.exogenous_sustainable
+#print axioms FiveOrgans.CoupledEndogenous.mode_zero
+#print axioms FiveOrgans.CoupledEndogenous.mode_twice_zero
+#print axioms FiveOrgans.CoupledEndogenous.alternate_two
+#print axioms FiveOrgans.CoupledEndogenous.alternate_run
+#print axioms FiveOrgans.CoupledEndogenous.alternate_unbounded
+#print axioms FiveOrgans.CoupledEndogenous.run_zero_stays
+#print axioms FiveOrgans.CoupledEndogenous.dwell_two_safe
+#print axioms FiveOrgans.CoupledEndogenous.response_lower
+#print axioms FiveOrgans.CoupledEndogenous.drift_sum_ge
+#print axioms FiveOrgans.CoupledEndogenous.afford_impossible
+#print axioms FiveOrgans.CoupledEndogenous.accel_impossible
+#print axioms FiveOrgans.CoupledStochastic.h_zero
+#print axioms FiveOrgans.CoupledStochastic.sum_sq_le
+#print axioms FiveOrgans.CoupledStochastic.stable_fail_le
+#print axioms FiveOrgans.CoupledStochastic.stable_horizon_le
+#print axioms FiveOrgans.CoupledStochastic.hd1_cases
+#print axioms FiveOrgans.CoupledStochastic.hd1_sq
+#print axioms FiveOrgans.CoupledStochastic.hd1_sq_sum
+#print axioms FiveOrgans.CoupledStochastic.nobrake_var_eq
+#print axioms FiveOrgans.CoupledStochastic.nobrake_var_unbounded
+#print axioms FiveOrgans.CoupledStochastic.worst_vs_average
+#print axioms FiveOrgans.CoupledStochastic.sustainable_count

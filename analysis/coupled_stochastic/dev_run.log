@@ -1,0 +1,8 @@
+selftest OK: generalised worst-case projection == Lean tables (7 envs x 32 configs)
+atlas 0/200 1s
+atlas 50/200 21s
+atlas 100/200 46s
+atlas 150/200 69s
+scaling done 360s
+pop done 424s
+wrote stoch_dev_raw.json in 424s

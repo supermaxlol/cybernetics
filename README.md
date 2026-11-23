@@ -6,7 +6,7 @@ spotlight (limited attention), and how these combine. A second half asks when a 
 macro-level model can stand in for a fine, micro-level one (the cross-scale map φ), and gives
 statistical tests of that, with their error rates proved.
 
-**640 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
+**682 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
 (see `AXIOM_AUDIT.txt`, produced by `#print axioms` on every theorem listed in
 `FiveOrgans/Audit.lean`).
 
@@ -33,9 +33,10 @@ does is an empirical question the library does not settle. In particular:
 not appear. The second combines the conceptual five organs: the two memory demands are merged
 into one organ (a relabelling; survival is unchanged), and the Watcher gets its own demand.
 
-Docstrings occasionally cite experiment notes (e.g. "S126", `notes/`, `analysis/`). Those refer to
-a private working folder that is not part of this repository; they are motivation only, and no
-theorem depends on them.
+Docstrings occasionally cite experiment notes (e.g. "S126", `notes/`). Those refer to a private
+working folder that is not part of this repository; they are motivation only, and no theorem
+depends on them. The pre-registered simulations for the coupled, stochastic and co-evolution
+modules **are** public, in `analysis/` (see below).
 
 ## Modules
 
@@ -99,6 +100,8 @@ Coupled.lean            ONE shared dynamical system for all five capacities (sho
 CoupledAblation.lean    exact verdicts for all 32 capacity subsets in 7 environments; complementary_MW, substitutable_SP, similar_not_same (same behaviour, different mechanism), not_monotone, organ_necessity_relative, resources_bind
 CoupledTransfer.lean    micro→macro: aggregate stays within η·L₁ of the representative unit (macro_micro_gap); viability verdicts transfer under uniform interventions (transfer_viable, transfer_intervention)
 CoupledRoles.lean       formal role classification (Necessary, Helpful, Harmful, Neutral, Substitutes, Complements, MinViable) over 32 configs × 7 environments; minimal viable sets; no_capacity_always_necessary, no_universal_minimum, role_flip
+CoupledStochastic.lean  random shocks: Var(response) = Σ aₜ²·Var(W) and a Chebyshev failure bound; a stable config fails with probability ≤ sfac²s²L₁/c² uniformly in time; without the Brake under delay, variance grows exactly linearly (nobrake_var_eq), so a worst-case-necessary Brake is not average-case necessary over a finite horizon (worst_vs_average); a shared pool I sustains at most I/c_min units (sustainable_count)
+CoupledEndogenous.lean  co-evolving environment: a viable policy exists iff drift v ≤ r + η·X (rate_iff); depletion kills from any stock, so static viability ≠ recursive viability (depletion_kills, static_not_recursive); switching between two viable modes can diverge, dwell time 2 is safe (alternate_unbounded, dwell_two_safe); in an accelerating environment no finite income keeps up (response_lower, afford_impossible, accel_impossible)
 CoupledPartial.lean     heterogeneous units: any mixture of viable configs transfers (partial_viable), one unbraked unit breaks the aggregate (partial_unstable); adaptation time = Watcher latency (adapt_exact); feedback tolerance δ < k (resist_iff), the Brake cuts it without delay (brake_resistance_nodelay)
 CrossScaleLongRun.lean  non-contracting macro (L=1): per-step error η gives drift nη; no margin licenses a lifetime verdict
 OpenWorld.lean          "exactly five" is not a theorem: no finite organ list is complete for an open world class; relative completeness in a closed one
@@ -134,10 +137,41 @@ and decide viability exactly for all 32 subsets. Main results:
     (`partial_unstable`).
 
 These are theorems about the stated model. "Necessary" here is mathematical necessity within the
-model's environment class, not an empirical claim. Two pre-registered radCAD simulations tested
-average-case versions; they live in the private working folder and are not part of this repository.
-Some of their hypotheses were falsified: worst-case necessity did not always appear as
-average-case necessity. No theorem depends on them.
+model's environment class, not an empirical claim.
+
+### Simulations (`analysis/`)
+
+Pre-registered radCAD and NumPy simulations test the theorems' average-case and stochastic
+versions. No theorem depends on them. Pre-registration timestamps are **local only**: files were
+frozen with `chmod 444` and SHA-256 hashes before each confirm run, and no third party timestamped
+them. `sh analysis/reproduce.sh` checks the hashes and runs the self-tests. `sh analysis/reproduce.sh full`
+reruns every confirm experiment. Pinned versions are in `analysis/requirements.txt`.
+
+* `analysis/coupled/`: average-case tests of the 32-configuration results. **Some hypotheses were
+  falsified.** Worst-case necessity did not always appear as average-case necessity. See the two
+  `RESULTS_*.md` files.
+* `analysis/coupled_stochastic/`: all 32 configurations under randomly drawn environments
+  (shocks, regime shifts, Watcher false positives and false negatives with latency, delay,
+  resources and costs, heterogeneity, coupled populations with failure propagation). It
+  distinguishes worst-case, average-case and practical (cost-adjusted) necessity. It also includes
+  an independent scalar re-implementation and a real-environment test (FRED VIX and dollar-index
+  disturbances, fetched by `fetch_fred.py`, with a **simulated** agent).
+  * **Status: the confirm run is still in progress.** Only the frozen protocol and the dev outputs
+    are here (`STATUS.md`).
+  * In dev, H6, H7, H8 and H10a failed. In H10a, coupling *rescued* failed unbraked units rather
+    than spreading failure.
+* `analysis/coevolution/`: the environment co-evolves with the agent (`CoupledEndogenous.lean`).
+  * Confirm result: 11/11 pre-registered tests passed. The thresholds were set after a dev run in
+    which everything already passed, so this is a replication on fresh noise, not a high-risk
+    prediction. Several tests mainly check the theorems.
+  * Findings: noise lowers the survivable drift below the Lean threshold; niche shaping raises it;
+    depletion kills statically viable agents at the closed-form time; investment in capacity has an
+    interior optimum in an accelerating world; and an Ashby-style reconfiguration rule survives
+    regime flips that kill every fixed configuration. See `RESULTS_coevolution_2026-11-23.md`.
+
+Limits: every model is low-dimensional and linear with stated noise. The real-data test uses real
+disturbance paths but a simulated agent. Nothing here validates the theory on a real organism,
+firm or institution.
 
 ## Choosing a difference test
 
