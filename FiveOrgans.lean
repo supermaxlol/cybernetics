@@ -60,4 +60,10 @@ import FiveOrgans.PoissonFlip
 import FiveOrgans.BernKL
 import FiveOrgans.BennettDiff
 import FiveOrgans.BennettRandom
+import FiveOrgans.Ville
+import FiveOrgans.Compression
+import FiveOrgans.CompressionInfo
+import FiveOrgans.CompressionCode
+import FiveOrgans.VilleTwoArm
+import FiveOrgans.UsefulCompression
 import FiveOrgans.Audit

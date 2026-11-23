@@ -6,7 +6,7 @@ spotlight (limited attention), and how these combine. A second half asks when a 
 macro-level model can stand in for a fine, micro-level one (the cross-scale map φ), and gives
 statistical tests of that, with their error rates proved.
 
-**459 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
+**527 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
 (see `AXIOM_AUDIT.txt`, produced by `#print axioms` on every theorem listed in
 `FiveOrgans/Audit.lean`).
 
@@ -89,6 +89,12 @@ PoissonFlip.lean        p near 1: the Poisson test on X and on 1 − X (≤ 8e^{
 BernKL.lean             Bernoulli relative-entropy (Chernoff–Hoeffding KL) bound P(p̂ ≥ a) ≤ exp(−N·kl(a‖p)); symmetric (binKL_symm), sharper than Poisson (poisKL_le_binKL); confidence sets, two-sample test, random counts
 BennettDiff.lean        direct two-sample difference test on p̂₁ − p̂₂ (no interval overlap): weighted mgf tails (wtail, wtail_bern), exact Bernoulli log-mgf ψ_q(x) = log(1+q(eˣ−1)) − qx with variance q(1−q); unknown p via the pooled KL set; false rejection ≤ 2e^{−L} + 2e^{−A} (bern_diff_two_sample). Assumes all draws independent with one mean
 BennettRandom.lean      the direct test with random visit counts: arms are prefixes of the even/odd draws of one independent sequence; union over count pairs (bern_diff_random); counts in 1..T: L = log(8T/α), A = log(4T²/α) ≤ α (bern_diff_random_alpha). Valid but conservative
+Ville.lean              time-uniform (anytime-valid) bound: exponential product martingale for independent [0,1] draws (tm_martingale), Ville/Doob P(∃k≤n: M_k ≥ c) ≤ 1/c (ville), Bernoulli tilt over all m ≤ T at cost log(1/α) with no log T (ville_bern), finite grid of tilts at cost log|Λ| (ville_bern_grid)
+Compression.lean        decision-relevant predictive compression: exact minimum memory = action cover number (adequate_fin_iff), pairwise bound can be strictly loose (pairwise_bound_loose), bits (bits_iff), sufficient predictive states (seq_sufficient, law_factors, card_laws_le), ε-close compression ⇒ regret ≤ 2ε (regret_le), merging costs ≥ g/2 (merge_regret_ge), forgetting and viability (approx_compression_survives, forget_safe_iff, forget_kills)
+CompressionInfo.lean    entropy lower bound (ent_factor_le, ent_le_log_card, memory_ge_decision_entropy, entropy_bound_tight), causal states with zero-probability transitions (seq_sufficient_pos, law_posUpdatable, law_minimal), regret → survival budget (compression_budget, summable_compression_viable), useful compression is task-relative (useful_compression_task_relative)
+CompressionCode.lean    Kraft inequality for prefix-free binary codes (kraft, kraft_code), source-coding bound (code_length_ge_entropy), expected memory code length ≥ decision entropy (safe_code_bound)
+VilleTwoArm.lean        paired two-arm anytime-valid test: no arm effect ⇒ crossing prob ≤ |Λ|e^{−A} for all m ≤ T (ville_two_arm, ville_two_arm_alpha)
+UsefulCompression.lean  capstone: useful compression ⇔ viability-preserving ⇔ decision-sufficient, and never merges incompatible histories (useful_compression, useful_iff_viable); full statement useful_compression_full adds: decision-equivalence merges are always useful, exact minimum size = cover number, one state useful ⇔ one action always safe (trivial_useful_iff)
 CrossScaleLongRun.lean  non-contracting macro (L=1): per-step error η gives drift nη; no margin licenses a lifetime verdict
 OpenWorld.lean          "exactly five" is not a theorem: no finite organ list is complete for an open world class; relative completeness in a closed one
 SpotlightEntropy.lean   entropy information cost: softmax optimal, payoff loss ≤ λ log n, never a perfect spotlight; random error costs ≤ 2C·E[e]

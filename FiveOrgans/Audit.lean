@@ -59,6 +59,12 @@ import FiveOrgans.PoissonFlip
 import FiveOrgans.BernKL
 import FiveOrgans.BennettDiff
 import FiveOrgans.BennettRandom
+import FiveOrgans.Ville
+import FiveOrgans.Compression
+import FiveOrgans.CompressionInfo
+import FiveOrgans.CompressionCode
+import FiveOrgans.VilleTwoArm
+import FiveOrgans.UsefulCompression
 
 open FiveOrgans
 
@@ -525,3 +531,73 @@ open FiveOrgans
 #print axioms FiveOrgans.BennettRandom.ew_sum
 #print axioms FiveOrgans.BennettRandom.bern_diff_random
 #print axioms FiveOrgans.BennettRandom.bern_diff_random_alpha
+
+-- Ville
+#print axioms FiveOrgans.Ville.mul_le_abs
+#print axioms FiveOrgans.Ville.int_exp
+#print axioms FiveOrgans.Ville.mgf_pos'
+#print axioms FiveOrgans.Ville.g_nonneg
+#print axioms FiveOrgans.Ville.g_le
+#print axioms FiveOrgans.Ville.g_int
+#print axioms FiveOrgans.Ville.g_integral
+#print axioms FiveOrgans.Ville.tm_nonneg
+#print axioms FiveOrgans.Ville.tm_int
+#print axioms FiveOrgans.Ville.tm_eq
+#print axioms FiveOrgans.Ville.meas_nat
+#print axioms FiveOrgans.Ville.tm_sm
+#print axioms FiveOrgans.Ville.tm_martingale
+#print axioms FiveOrgans.Ville.ville
+#print axioms FiveOrgans.Ville.bern_base_pos
+#print axioms FiveOrgans.Ville.ville_bern
+#print axioms FiveOrgans.Ville.ville_bern_grid
+#print axioms FiveOrgans.Compression.decEquiv_equivalence
+#print axioms FiveOrgans.Compression.factor_adequate
+#print axioms FiveOrgans.Compression.safeSet_adequate
+#print axioms FiveOrgans.Compression.adequate_transport
+#print axioms FiveOrgans.Compression.covers_of_safe
+#print axioms FiveOrgans.Compression.safe_of_covers
+#print axioms FiveOrgans.Compression.adequate_fin_iff
+#print axioms FiveOrgans.Compression.bits_iff
+#print axioms FiveOrgans.Compression.pairwise_bound_loose
+#print axioms FiveOrgans.Compression.seq_sufficient
+#print axioms FiveOrgans.Compression.law_factors
+#print axioms FiveOrgans.Compression.card_laws_le
+#print axioms FiveOrgans.Compression.regret_le
+#print axioms FiveOrgans.Compression.expected_regret_le
+#print axioms FiveOrgans.Compression.merge_regret_ge
+#print axioms FiveOrgans.Compression.approx_compression_survives
+#print axioms FiveOrgans.Compression.forget_safe_iff
+#print axioms FiveOrgans.Compression.forget_kills
+#print axioms FiveOrgans.CompressionInfo.push_nonneg
+#print axioms FiveOrgans.CompressionInfo.push_sum
+#print axioms FiveOrgans.CompressionInfo.le_push
+#print axioms FiveOrgans.CompressionInfo.ent_push_eq
+#print axioms FiveOrgans.CompressionInfo.ent_factor_le
+#print axioms FiveOrgans.CompressionInfo.ent_le_log_card
+#print axioms FiveOrgans.CompressionInfo.safe_entropy_bound
+#print axioms FiveOrgans.CompressionInfo.memory_ge_decision_entropy
+#print axioms FiveOrgans.CompressionInfo.entropy_bound_tight
+#print axioms FiveOrgans.CompressionInfo.seq_sufficient_pos
+#print axioms FiveOrgans.CompressionInfo.law_sufficient
+#print axioms FiveOrgans.CompressionInfo.law_posUpdatable
+#print axioms FiveOrgans.CompressionInfo.law_minimal
+#print axioms FiveOrgans.CompressionInfo.compression_budget
+#print axioms FiveOrgans.CompressionInfo.summable_compression_viable
+#print axioms FiveOrgans.CompressionInfo.useful_compression_task_relative
+#print axioms FiveOrgans.CompressionCode.sum_le_one_of_nil
+#print axioms FiveOrgans.CompressionCode.kraft
+#print axioms FiveOrgans.CompressionCode.kraft_code
+#print axioms FiveOrgans.CompressionCode.code_length_ge_entropy
+#print axioms FiveOrgans.CompressionCode.push_mul_sum
+#print axioms FiveOrgans.CompressionCode.safe_code_bound
+#print axioms FiveOrgans.VilleTwoArm.dif_mem
+#print axioms FiveOrgans.VilleTwoArm.dif_meas
+#print axioms FiveOrgans.VilleTwoArm.int_unit
+#print axioms FiveOrgans.VilleTwoArm.dif_mean
+#print axioms FiveOrgans.VilleTwoArm.dif_indep
+#print axioms FiveOrgans.VilleTwoArm.ville_two_arm
+#print axioms FiveOrgans.VilleTwoArm.ville_two_arm_alpha
+#print axioms FiveOrgans.UsefulCompression.useful_iff_viable
+#print axioms FiveOrgans.UsefulCompression.useful_compression
+#print axioms FiveOrgans.UsefulCompression.trivial_useful_iff
+#print axioms FiveOrgans.UsefulCompression.useful_compression_full
