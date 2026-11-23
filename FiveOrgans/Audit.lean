@@ -65,6 +65,11 @@ import FiveOrgans.CompressionInfo
 import FiveOrgans.CompressionCode
 import FiveOrgans.VilleTwoArm
 import FiveOrgans.UsefulCompression
+import FiveOrgans.Coupled
+import FiveOrgans.CoupledAblation
+import FiveOrgans.CoupledTransfer
+import FiveOrgans.CoupledRoles
+import FiveOrgans.CoupledPartial
 
 open FiveOrgans
 
@@ -601,3 +606,116 @@ open FiveOrgans
 #print axioms FiveOrgans.UsefulCompression.useful_compression
 #print axioms FiveOrgans.UsefulCompression.trivial_useful_iff
 #print axioms FiveOrgans.UsefulCompression.useful_compression_full
+#print axioms FiveOrgans.Coupled.xa_conv
+#print axioms FiveOrgans.Coupled.xd_conv
+#print axioms FiveOrgans.Coupled.xC_conv
+#print axioms FiveOrgans.Coupled.hd_quarter
+#print axioms FiveOrgans.Coupled.hd_one_three
+#print axioms FiveOrgans.Coupled.hd_one_six
+#print axioms FiveOrgans.Coupled.hd_one_abs_block
+#print axioms FiveOrgans.Coupled.hd_one_abs_sum
+#print axioms FiveOrgans.Coupled.h_B_delay
+#print axioms FiveOrgans.Coupled.h_B_nodelay
+#print axioms FiveOrgans.Coupled.h_nB_nodelay
+#print axioms FiveOrgans.Coupled.h_nB_delay
+#print axioms FiveOrgans.Coupled.sum_quarter
+#print axioms FiveOrgans.Coupled.sum_threeq
+#print axioms FiveOrgans.Coupled.sum_zero_pow
+#print axioms FiveOrgans.Coupled.h_nonneg
+#print axioms FiveOrgans.Coupled.h_anti
+#print axioms FiveOrgans.Coupled.S_le
+#print axioms FiveOrgans.Coupled.S_tendsto
+#print axioms FiveOrgans.Coupled.sum_le_initial
+#print axioms FiveOrgans.Coupled.sum_le_initial'
+#print axioms FiveOrgans.Coupled.sfac_pos
+#print axioms FiveOrgans.Coupled.L1_pos
+#print axioms FiveOrgans.Coupled.abs_sub_le2
+#print axioms FiveOrgans.Coupled.dr_le
+#print axioms FiveOrgans.Coupled.card_window
+#print axioms FiveOrgans.Coupled.drift_sum_le
+#print axioms FiveOrgans.Coupled.traj_le
+#print axioms FiveOrgans.Coupled.traj_const
+#print axioms FiveOrgans.Coupled.exceed_const
+#print axioms FiveOrgans.Coupled.exceed
+#print axioms FiveOrgans.Coupled.unstable_exceed
+#print axioms FiveOrgans.Coupled.stays_iff
+#print axioms FiveOrgans.Coupled.resource_iff
+#print axioms FiveOrgans.Coupled.viable_iff
+#print axioms FiveOrgans.Coupled.lat_pos
+#print axioms FiveOrgans.Coupled.Hs_eq
+#print axioms FiveOrgans.Coupled.peak_eq
+#print axioms FiveOrgans.Coupled.viable_closed
+#print axioms FiveOrgans.Coupled.brake_necessary
+#print axioms FiveOrgans.Coupled.watcher_redundant
+#print axioms FiveOrgans.Coupled.cost_W
+#print axioms FiveOrgans.Coupled.viable_drop_watcher
+#print axioms FiveOrgans.Coupled.memory_harmful
+#print axioms FiveOrgans.Coupled.memory_helps_noshift
+#print axioms FiveOrgans.Coupled.Hs_le_L1
+#print axioms FiveOrgans.Coupled.Hs_mono
+#print axioms FiveOrgans.Coupled.watcher_helps
+#print axioms FiveOrgans.Coupled.spotlight_helps
+#print axioms FiveOrgans.Coupled.skin_helps
+#print axioms FiveOrgans.Coupled.brake_harmful_nodelay
+#print axioms FiveOrgans.CoupledAblation.mk_ok
+#print axioms FiveOrgans.CoupledAblation.calm_table
+#print axioms FiveOrgans.CoupledAblation.delay_table
+#print axioms FiveOrgans.CoupledAblation.shiftFast_table
+#print axioms FiveOrgans.CoupledAblation.shiftSlow_table
+#print axioms FiveOrgans.CoupledAblation.deadbeatShift_table
+#print axioms FiveOrgans.CoupledAblation.hostile_table
+#print axioms FiveOrgans.CoupledAblation.poor_table
+#print axioms FiveOrgans.CoupledAblation.complementary_MW
+#print axioms FiveOrgans.CoupledAblation.substitutable_SP
+#print axioms FiveOrgans.CoupledAblation.similar_not_same
+#print axioms FiveOrgans.CoupledAblation.harmful_M_B
+#print axioms FiveOrgans.CoupledAblation.not_monotone
+#print axioms FiveOrgans.CoupledAblation.organ_necessity_relative
+#print axioms FiveOrgans.CoupledAblation.brake_nec_suff
+#print axioms FiveOrgans.CoupledAblation.resources_bind
+#print axioms FiveOrgans.CoupledTransfer.xC_linear
+#print axioms FiveOrgans.CoupledTransfer.xC_add
+#print axioms FiveOrgans.CoupledTransfer.xC_err_le
+#print axioms FiveOrgans.CoupledTransfer.macro_micro_gap
+#print axioms FiveOrgans.CoupledTransfer.transfer_viable
+#print axioms FiveOrgans.CoupledTransfer.transfer_failure
+#print axioms FiveOrgans.CoupledTransfer.transfer_intervention
+#print axioms FiveOrgans.CoupledRoles.calm_b
+#print axioms FiveOrgans.CoupledRoles.delay_b
+#print axioms FiveOrgans.CoupledRoles.shiftFast_b
+#print axioms FiveOrgans.CoupledRoles.shiftSlow_b
+#print axioms FiveOrgans.CoupledRoles.deadbeat_b
+#print axioms FiveOrgans.CoupledRoles.hostile_b
+#print axioms FiveOrgans.CoupledRoles.poor_b
+#print axioms FiveOrgans.CoupledRoles.roles_calm
+#print axioms FiveOrgans.CoupledRoles.roles_delay
+#print axioms FiveOrgans.CoupledRoles.roles_shiftFast
+#print axioms FiveOrgans.CoupledRoles.roles_shiftSlow
+#print axioms FiveOrgans.CoupledRoles.roles_deadbeat
+#print axioms FiveOrgans.CoupledRoles.roles_hostile
+#print axioms FiveOrgans.CoupledRoles.roles_poor
+#print axioms FiveOrgans.CoupledRoles.minimal_calm
+#print axioms FiveOrgans.CoupledRoles.minimal_delay
+#print axioms FiveOrgans.CoupledRoles.minimal_shiftFast
+#print axioms FiveOrgans.CoupledRoles.minimal_shiftSlow
+#print axioms FiveOrgans.CoupledRoles.minimal_deadbeat
+#print axioms FiveOrgans.CoupledRoles.minimal_hostile
+#print axioms FiveOrgans.CoupledRoles.minimal_poor
+#print axioms FiveOrgans.CoupledRoles.no_capacity_always_necessary
+#print axioms FiveOrgans.CoupledRoles.no_universal_minimum
+#print axioms FiveOrgans.CoupledRoles.every_role_occurs
+#print axioms FiveOrgans.CoupledRoles.role_flip
+#print axioms FiveOrgans.CoupledPartial.unit_le
+#print axioms FiveOrgans.CoupledPartial.partial_bound
+#print axioms FiveOrgans.CoupledPartial.partial_viable
+#print axioms FiveOrgans.CoupledPartial.resPath_adm
+#print axioms FiveOrgans.CoupledPartial.res_theta
+#print axioms FiveOrgans.CoupledPartial.res_mem
+#print axioms FiveOrgans.CoupledPartial.res_traj
+#print axioms FiveOrgans.CoupledPartial.partial_unstable
+#print axioms FiveOrgans.CoupledPartial.adapt_exact
+#print axioms FiveOrgans.CoupledPartial.no_adapt_without_watcher
+#print axioms FiveOrgans.CoupledPartial.no_baseline_without_memory
+#print axioms FiveOrgans.CoupledPartial.resist_iff
+#print axioms FiveOrgans.CoupledPartial.brake_resistance_nodelay
+#print axioms FiveOrgans.CoupledPartial.perturbed_loop

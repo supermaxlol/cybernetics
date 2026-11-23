@@ -66,4 +66,9 @@ import FiveOrgans.CompressionInfo
 import FiveOrgans.CompressionCode
 import FiveOrgans.VilleTwoArm
 import FiveOrgans.UsefulCompression
+import FiveOrgans.Coupled
+import FiveOrgans.CoupledAblation
+import FiveOrgans.CoupledTransfer
+import FiveOrgans.CoupledRoles
+import FiveOrgans.CoupledPartial
 import FiveOrgans.Audit

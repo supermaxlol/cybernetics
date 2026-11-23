@@ -6,7 +6,7 @@ spotlight (limited attention), and how these combine. A second half asks when a 
 macro-level model can stand in for a fine, micro-level one (the cross-scale map φ), and gives
 statistical tests of that, with their error rates proved.
 
-**527 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
+**640 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
 (see `AXIOM_AUDIT.txt`, produced by `#print axioms` on every theorem listed in
 `FiveOrgans/Audit.lean`).
 
@@ -95,6 +95,11 @@ CompressionInfo.lean    entropy lower bound (ent_factor_le, ent_le_log_card, mem
 CompressionCode.lean    Kraft inequality for prefix-free binary codes (kraft, kraft_code), source-coding bound (code_length_ge_entropy), expected memory code length ≥ decision entropy (safe_code_bound)
 VilleTwoArm.lean        paired two-arm anytime-valid test: no arm effect ⇒ crossing prob ≤ |Λ|e^{−A} for all m ≤ T (ville_two_arm, ville_two_arm_alpha)
 UsefulCompression.lean  capstone: useful compression ⇔ viability-preserving ⇔ decision-sufficient, and never merges incompatible histories (useful_compression, useful_iff_viable); full statement useful_compression_full adds: decision-equivalence merges are always useful, exact minimum size = cover number, one state useful ⇔ one action always safe (trivial_useful_iff)
+Coupled.lean            ONE shared dynamical system for all five capacities (shocks, drift shifts, memory, latency-dependent Watcher, Brake gain, one-step delay, shared resources); exact decidable viability rule (viable_iff, viable_closed); interaction theorems (brake_necessary, memory_harmful, watcher_redundant, brake_harmful_nodelay)
+CoupledAblation.lean    exact verdicts for all 32 capacity subsets in 7 environments; complementary_MW, substitutable_SP, similar_not_same (same behaviour, different mechanism), not_monotone, organ_necessity_relative, resources_bind
+CoupledTransfer.lean    micro→macro: aggregate stays within η·L₁ of the representative unit (macro_micro_gap); viability verdicts transfer under uniform interventions (transfer_viable, transfer_intervention)
+CoupledRoles.lean       formal role classification (Necessary, Helpful, Harmful, Neutral, Substitutes, Complements, MinViable) over 32 configs × 7 environments; minimal viable sets; no_capacity_always_necessary, no_universal_minimum, role_flip
+CoupledPartial.lean     heterogeneous units: any mixture of viable configs transfers (partial_viable), one unbraked unit breaks the aggregate (partial_unstable); adaptation time = Watcher latency (adapt_exact); feedback tolerance δ < k (resist_iff), the Brake cuts it without delay (brake_resistance_nodelay)
 CrossScaleLongRun.lean  non-contracting macro (L=1): per-step error η gives drift nη; no margin licenses a lifetime verdict
 OpenWorld.lean          "exactly five" is not a theorem: no finite organ list is complete for an open world class; relative completeness in a closed one
 SpotlightEntropy.lean   entropy information cost: softmax optimal, payoff loss ≤ λ log n, never a perfect spotlight; random error costs ≤ 2C·E[e]
@@ -109,6 +114,30 @@ SpotlightNoisy.lean spotlight on estimated relevance: loss ≤ 2Ce; beats unifor
 TwoSpeed.lean     one EMA rate can't both track change and ignore noise; two rates can
 Audit.lean        #print axioms for every theorem
 ```
+
+## Coupled recursive viability
+
+The `Coupled*` modules put Skin, Memory, Spotlight, Brake and Watcher into **one** shared system
+and decide viability exactly for all 32 subsets. Main results:
+
+* **No capacity is necessary everywhere, and no subset is minimal everywhere**
+  (`no_capacity_always_necessary`, `no_universal_minimum`). A capacity is necessary in one
+  environment and harmful in another (`role_flip`): the Brake is required under delay, yet without
+  delay it cuts the tolerable destabilising feedback from δ < 1 to δ < ¼.
+* Capacities can be complements (Memory needs the Watcher after a shift) or substitutes (Skin or
+  Spotlight under a deadbeat shift). Matching behaviour does not identify the mechanism
+  (`similar_not_same`).
+* **Cross-scale:**
+  * uniform interventions transfer from unit to aggregate within a proved margin;
+  * so does any mixture of viable configurations (`partial_viable`);
+  * in the worst case, one unbraked unit among N suffices to break the aggregate
+    (`partial_unstable`).
+
+These are theorems about the stated model. "Necessary" here is mathematical necessity within the
+model's environment class, not an empirical claim. Two pre-registered radCAD simulations tested
+average-case versions; they live in the private working folder and are not part of this repository.
+Some of their hypotheses were falsified: worst-case necessity did not always appear as
+average-case necessity. No theorem depends on them.
 
 ## Choosing a difference test
 
