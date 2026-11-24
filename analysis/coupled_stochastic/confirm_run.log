@@ -1,0 +1,37 @@
+selftest OK: generalised worst-case projection == Lean tables (7 envs x 32 configs)
+atlas 0/600 0s
+atlas 50/600 23s
+atlas 100/600 46s
+atlas 150/600 65s
+atlas 200/600 86s
+atlas 250/600 109s
+atlas 300/600 133s
+atlas 350/600 159s
+atlas 400/600 181s
+atlas 450/600 204s
+atlas 500/600 228s
+atlas 550/600 254s
+scaling done 95118s
+pop done 95219s
+wrote stoch_confirm_raw.json in 95219s
+H10a_pass False
+H10b_pass True
+H10c_pass True
+H11_pass True
+H12_pass False
+H1_pass True
+H2_pass True
+H3_pass True
+H5_pass True
+H6_pass True
+H7_pass False
+H8_pass False
+H9_pass True
+agreement 4440 / 4440
+{'brake': True, 'rho': 0.0, 'var_sim': 2.9223345954814093, 'var_exact': 2.962962962962963, 'rel_err': 0.013712074025024314}
+{'brake': False, 'rho': 0.0, 'var_sim': 205.61922563479683, 'var_exact': 200.0, 'rel_err': 0.02809612817398417}
+{'brake': True, 'rho': 0.5, 'var_sim': 6.531257221960679, 'var_exact': 6.518518518518518, 'rel_err': 0.001954232914422442}
+{'brake': True, 'rho': 0.8, 'var_sim': 10.42533271779608, 'var_exact': 10.8641975308642, 'rel_err': 0.04039551120286104}
+VIXCLS {'sha256': 'b891dcbb963850281932fe7b2ee276e4b24a759bbbd00a000cbc73ff0276719f', 'n_cal': 1084, 'n_test': 1083, 'sd_cal': 0.0879736229629099, 'a2_cal': 1.0, 'rho_cal': -0.09504419717398739, 'a2_test': 0.6917779089959945, 'rho_test': -0.06646611756670714, 'kurt_cal': 7.97344963965992, 'Ha_median_spearman': 0.6438591006698129, 'Ha_n': 108, 'Hb_brake_delay': 0.5533854166666666, 'Hb_brake_nodelay': -0.21375868055555555, 'Hc': [{'X': 4.0, 'n_failures': 29, 'obs': 35.275862068965516, 'pred': 17.826273393113755, 'ratio': 1.978869127104967}, {'X': 6.0, 'n_failures': 16, 'obs': 63.625, 'pred': 40.10911513450595, 'ratio': 1.5862977726293266}, {'X': 8.0, 'n_failures': 9, 'obs': 110.66666666666667, 'pred': 71.30509357245502, 'ratio': 1.5520162883485358}], 'Hd_n': 108, 'Hd_hold': 1.0, 'Ha_pass': True, 'Hb_pass': True, 'Hc_pass': True, 'Hd_pass': True}
+DTWEXBGS {'sha256': '2437d34b117c81dee64aa0a0ad3c29c1dc0a6318abdd286e9179144bb970a4e6', 'n_cal': 1059, 'n_test': 1059, 'sd_cal': 0.0029673208124325425, 'a2_cal': 1.0, 'rho_cal': 0.07647688766222291, 'a2_test': 1.2381970646708336, 'rho_test': 0.03292167175591057, 'kurt_cal': 4.158723762524603, 'Ha_median_spearman': 0.522602670617185, 'Ha_n': 108, 'Hb_brake_delay': 0.5967881944444444, 'Hb_brake_nodelay': -0.23893229166666666, 'Hc': [{'X': 4.0, 'n_failures': 58, 'obs': 18.155172413793103, 'pred': 14.957430968037988, 'ratio': 1.2137894838082994}, {'X': 6.0, 'n_failures': 27, 'obs': 37.148148148148145, 'pred': 33.654219678085475, 'ratio': 1.1038184365432726}, {'X': 8.0, 'n_failures': 17, 'obs': 59.05882352941177, 'pred': 59.82972387215195, 'ratio': 0.9871150944238437}], 'Hd_n': 96, 'Hd_hold': 0.9375, 'Ha_pass': True, 'Hb_pass': True, 'Hc_pass': True, 'Hd_pass': True}
+DONE

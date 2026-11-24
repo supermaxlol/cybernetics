@@ -14,7 +14,7 @@ statistical tests of that, with their error rates proved.
 
 Every theorem is a statement about a **mathematical model** under stated hypotheses. A
 machine-checked proof means the conclusion follows from the hypotheses; it does **not** mean any
-real system (an organism, a firm, an AI agent, a market) satisfies those hypotheses. Whether one
+real system (an organism, a firm, a market) satisfies those hypotheses. Whether one
 does is an empirical question the library does not settle. In particular:
 
 * the organ theorems hold for the stylised dynamics in each file (linear brakes, binary Watcher
@@ -156,10 +156,14 @@ reruns every confirm experiment. Pinned versions are in `analysis/requirements.t
   distinguishes worst-case, average-case and practical (cost-adjusted) necessity. It also includes
   an independent scalar re-implementation and a real-environment test (FRED VIX and dollar-index
   disturbances, fetched by `fetch_fred.py`, with a **simulated** agent).
-  * **Status: the confirm run is still in progress.** Only the frozen protocol and the dev outputs
-    are here (`STATUS.md`).
-  * In dev, H6, H7, H8 and H10a failed. In H10a, coupling *rescued* failed unbraked units rather
-    than spreading failure.
+  * Confirm result: 16 of 21 hypothesis rows (18 of 23 scored criteria) passed on 600 new
+    environments, a wider scaling grid and the held-out second half of the FRED series. The
+    Brake phase boundary, the diffusive law, the Chebyshev/AR split, coupling rescue and all
+    four real-data tests replicated. H6 (Memory×Watcher) and H13a (real rank stability) now
+    pass; H7 and H8's latency trend failed again; H4b failed only at ρ = 0.8, X = 5.
+    **H12 reversed**: under scarce income, funding the Brake before Watcher and Memory is
+    worse (0.068 vs 0.126), so the dev funding-order claim is withdrawn. See
+    `RESULTS_stochastic_2026-11-24.md`.
 * `analysis/coevolution/`: the environment co-evolves with the agent (`CoupledEndogenous.lean`).
   * Confirm result: 11/11 pre-registered tests passed. The thresholds were set after a dev run in
     which everything already passed, so this is a replication on fresh noise, not a high-risk
