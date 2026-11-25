@@ -3,6 +3,11 @@
 Pre-registered confirmatory run. Results write-up:
 [`RESULTS_stochastic_2026-11-24.md`](RESULTS_stochastic_2026-11-24.md).
 
+**Corrections (2026-11-25), also in the results document.** H12 was described as "reversed": the
+difference (-.058, bootstrap 95% [-.120, +.001], MWU p = .20) does not support a reversal. The H10a
+correlation comes wholly from chi = .8. All six rho = .8 H4b ratios are .719-.787. The frozen C is 1.0
+(not .989). H13a did not replicate.
+
 ## Frozen inputs (read-only, hashes in `FROZEN_stochastic.sha256`)
 
 | File | Role |

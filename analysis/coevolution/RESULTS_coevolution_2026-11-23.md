@@ -1,5 +1,21 @@
 # Results: co-evolution (endogenous recursive viability)
 
+## Corrections, 2026-11-25
+
+These override the text below. No pre-registered verdict changes.
+
+1. **E4 tested two fixed agents, not 32.** Fixed no-Brake survives 0.64-0.66 at lambda = 0.03 in the
+   table below. "No fixed configuration is viable", "kills every fixed configuration" and "answers
+   the question the 32-configuration analysis could not reach" are withdrawn. The finding is: the
+   ultrastable agent beat both tested fixed agents in all 20 cells.
+2. **b\* is about a/2 to 2a/3** only at s = 0.05. At s = 0.2 the best b/a is 1.0, 1.0 and 0.67.
+3. **Zeros in the E1 table** mean no tested ratio reached survival 0.5. The grid has a floor, so
+   "v* rises from 0" is not a measured zero.
+4. **tau = 0.5** survival is 0.97-0.99, not "no loss".
+5. C5b is scored on mean time to death < T. E1 survival is over T = 3000 steps.
+6. E2 has no restoration action. "No organ configuration rescues this" holds only for that model:
+   `ResourceEcology.lean` (`rescue`, `sustain_iff`) shows restoration can rescue a depleting agent.
+
 Confirm run, 2026-11-23:
 
 - 200 seeds per cell, noise keys base 200;

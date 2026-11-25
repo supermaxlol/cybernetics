@@ -158,20 +158,25 @@ reruns every confirm experiment. Pinned versions are in `analysis/requirements.t
   disturbances, fetched by `fetch_fred.py`, with a **simulated** agent).
   * Confirm result: 16 of 21 hypothesis rows (18 of 23 scored criteria) passed on 600 new
     environments, a wider scaling grid and the held-out second half of the FRED series. The
-    Brake phase boundary, the diffusive law, the Chebyshev/AR split, coupling rescue and all
-    four real-data tests replicated. H6 (Memory×Watcher) and H13a (real rank stability) now
-    pass; H7 and H8's latency trend failed again; H4b failed only at ρ = 0.8, X = 5.
-    **H12 reversed**: under scarce income, funding the Brake before Watcher and Memory is
-    worse (0.068 vs 0.126), so the dev funding-order claim is withdrawn. See
-    `RESULTS_stochastic_2026-11-24.md`.
+    Brake phase boundary, the diffusive law, the Chebyshev/AR split and coupling rescue replicated.
+    H6 (Memory×Watcher) passes; H7 and H8's latency trend failed again. H4b failed: all six
+    ρ = 0.8 ratios are 0.719-0.787, so the persistence factor is biased there (only two cells
+    cross the 0.75 bar). H12 failed its pass rule, and the dev funding-order claim is withdrawn;
+    it is **not** shown to be reversed (difference −0.058, bootstrap 95% interval [−0.120, +0.001],
+    Mann-Whitney p = 0.20). The H10a correlation comes wholly from χ = 0.8 and does not show that
+    neighbour support dominates. H13a failed in dev and passed in confirm, so it did not
+    replicate. "18 of 23" splits two passing rows; the solid figure is 16 of 21. Corrected
+    2026-11-25; see the corrections at the top of `RESULTS_stochastic_2026-11-24.md`.
 * `analysis/coevolution/`: the environment co-evolves with the agent (`CoupledEndogenous.lean`).
   * Confirm result: 11/11 pre-registered tests passed. The thresholds were set after a dev run in
     which everything already passed, so this is a replication on fresh noise, not a high-risk
     prediction. Several tests mainly check the theorems.
   * Findings: noise lowers the survivable drift below the Lean threshold; niche shaping raises it;
     depletion kills statically viable agents at the closed-form time; investment in capacity has an
-    interior optimum in an accelerating world; and an Ashby-style reconfiguration rule survives
-    regime flips that kill every fixed configuration. See `RESULTS_coevolution_2026-11-23.md`.
+    interior optimum in an accelerating world; and an Ashby-style reconfiguration rule beat the
+    two fixed agents tested under regime flips in all 20 cells (an earlier claim that it beats
+    every fixed configuration is withdrawn). Corrected 2026-11-25; see
+    `RESULTS_coevolution_2026-11-23.md`.
 
 Limits: every model is low-dimensional and linear with stated noise. The real-data test uses real
 disturbance paths but a simulated agent. Nothing here validates the theory on a real organism,

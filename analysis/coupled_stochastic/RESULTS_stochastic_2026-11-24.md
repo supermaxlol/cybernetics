@@ -1,5 +1,30 @@
 # Results: stochastic recursive viability (confirmatory run)
 
+## Corrections, 2026-11-25
+
+These override the text below, which is left as written on 2026-11-24. Post-hoc checks, not
+pre-registered, computed from `stoch_confirm_raw.json` and `stoch_confirm_results.json`.
+No pre-registered verdict changes; the interpretations do.
+
+1. **C.** The frozen constant is C = 1.0 (`analyze.py`). 0.989 is an estimate from the confirm run.
+2. **H12 failed its pass rule, but it is not shown to be reversed.** Brake-first minus
+   Watcher/Memory-first is -0.058, bootstrap 95% interval [-0.120, +0.001], Mann-Whitney p = 0.20
+   (n = 30 and 32). Read "reversed", "worse" and the causal account as "not supported; the sign of
+   the difference is unresolved". The groups also differ in mean cost/income (2.04 vs 1.89).
+3. **H10a.** The whole correlation comes from chi = 0.8. At chi = 0, 0.2 and 0.5 the excess
+   other-unit deaths are at most 0.0014 in any cell and the Spearman over those levels is 0.0. At
+   chi = 0.8 the excess is negative because the control population itself dies, so the measure has
+   no room to rise. "Neighbour support is the dominant effect" does not follow from H10a.
+4. **H4b.** All six rho = 0.8 ratios are 0.719-0.787, at every X, so f(rho) is biased at strong
+   persistence. It is not a boundary effect at X = 5; only those two cells cross 0.75.
+5. **H6 "slow EMA helps"** rests on point estimates (-0.049 vs -0.054) with overlapping intervals.
+6. **H13a did not replicate.** It failed in dev and passed in confirm. "All four real-data tests
+   replicated" (README) is wrong. The "dev stayed inside one regime" explanation is speculation.
+7. **"18 of 23"** is inferred by splitting two passing rows. The solid figure is 16 of 21 rows.
+8. **Runtime.** The stated per-cell times do not add up to 26 h, and the swap attribution was not
+   measured. The cause of the slowness is unknown.
+9. **H7.** The two suggested alternative explanations were not tested.
+
 Pre-registration: `PREREG_stochastic_2026-11-23.md` (sha256 `25597ec4…a0e0`), frozen
 2026-11-23 09:55:16 UTC together with the four scripts. Log: `confirm_run.log`.
 Raw output: `stoch_confirm_raw.json` (3.30 MB). Analysis outputs:
