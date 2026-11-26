@@ -1,0 +1,6 @@
+902 c1 emerge {'base': 0.392, 'shift': 0.128, 'base_late': 0.162, 'units': 2.0, 'cost': 0.026, 'abl_recurrence': -0.003, 'abl_y': 0.329, 'abl_z1': 0.0, 'abl_z2': 0.0, 'abl_cue': 0.0, 'abl_uprev': 0.0, 'abl_skin': 0.0}
+902 c1 free {'base': 0.202, 'shift': 0.031, 'base_late': 0.071, 'units': 1.0, 'cost': 0.0, 'abl_recurrence': 0.07, 'abl_y': 0.086, 'abl_z1': -0.01, 'abl_z2': 0.0, 'abl_cue': 0.0, 'abl_uprev': 0.0, 'abl_skin': 0.0}
+902 c1 full {'base': 0.849, 'shift': 0.283, 'base_late': 0.774, 'units': 8.0, 'cost': 0.248, 'abl_recurrence': 0.666, 'abl_y': 0.775, 'abl_z1': 0.022, 'abl_z2': -0.087, 'abl_cue': 0.553, 'abl_uprev': 0.035, 'abl_skin': 0.0}
+902 c1 small {'base': 0.286, 'shift': 0.034, 'base_late': 0.113, 'units': 2.0, 'cost': 0.044, 'abl_recurrence': 0.089, 'abl_y': 0.166, 'abl_z1': 0.022, 'abl_z2': 0.003, 'abl_cue': 0.017, 'abl_uprev': 0.047, 'abl_skin': 0.0}
+902 c1 drift {'base': 0.181, 'shift': 0.032, 'base_late': 0.047, 'units': 3.0, 'cost': 0.042, 'abl_recurrence': -0.044, 'abl_y': 0.062, 'abl_z1': -0.005, 'abl_z2': 0.0, 'abl_cue': 0.0, 'abl_uprev': -0.001, 'abl_skin': 0.0}
+902 c1 five {'base': 1.0, 'shift': 0.058, 'base_late': 1.0, 'units': 1.0, 'cost': 0.01, 'abl_memory': 0.858, 'abl_spotlight': 0.0, 'abl_watcher': 0.0, 'abl_brake': 0.0, 'abl_skin': 0.0, 'gates': [1, 0, 0, 0, 0]}

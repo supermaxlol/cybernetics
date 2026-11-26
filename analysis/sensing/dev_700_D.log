@@ -1,0 +1,25 @@
+D 1428 s
+== D a=4.0 d=0.3 M*=6 (exact 5.71) s_c=0.175
+  M 4 {'theory': (0.0, 0.0, 0.0, {'H': 1.992, 'Hcond': 1.975}), 'learn': (0.0, 0.0, 0.0, {'H': 1.986, 'Hcond': 1.957}), 'mem': (0.0, 0.0, 0.0, {'H': 1.459, 'Hcond': 0.792})}
+  M 5 {'theory': (0.0, 0.134, 0.0, {'H': 2.248, 'Hcond': 2.226}), 'learn': (0.0, 0.018, 0.0, {'H': 2.286, 'Hcond': 2.238}), 'mem': (0.0, 0.0, 0.0, {'H': 1.658, 'Hcond': 1.152})}
+  M 6 {'theory': (1.0, 1.0, 1.0, {'H': 2.384, 'Hcond': 2.338}), 'learn': (0.975, 0.991, 0.94, {'H': 2.403, 'Hcond': 2.361}), 'mem': (0.0, 0.0, 0.0, {'H': 1.792, 'Hcond': 0.333})}
+  M 7 {'theory': (1.0, 1.0, 1.0, {'H': 2.435, 'Hcond': 2.393}), 'learn': (0.733, 0.963, 0.0, {'H': 2.4, 'Hcond': 2.369}), 'mem': (0.0, 0.0, 0.0, {'H': 1.811, 'Hcond': 0.844})}
+  M 8 {'theory': (1.0, 1.0, 1.0, {'H': 2.471, 'Hcond': 2.446}), 'learn': (0.997, 1.0, 0.995, {'H': 2.459, 'Hcond': 2.398}), 'mem': (0.0, 0.0, 0.0, {'H': 2.537, 'Hcond': 1.843})}
+  s/s_c 0.6 {'linear': 1.0, 'learn': 1.0, 'mem': 1.0, 'closed': 1.0}
+  s/s_c 0.8 {'linear': 1.0, 'learn': 1.0, 'mem': 1.0, 'closed': 1.0}
+  s/s_c 0.9 {'linear': 1.0, 'learn': 1.0, 'mem': 1.0, 'closed': 1.0}
+  s/s_c 1.0 {'linear': 1.0, 'learn': 0.998, 'mem': 0.997, 'closed': 1.0}
+  s/s_c 1.05 {'linear': 0.75, 'learn': 0.752, 'mem': 0.755, 'closed': 0.757}
+  s/s_c 1.1 {'linear': 0.36, 'learn': 0.415, 'mem': 0.4, 'closed': 0.345}
+  s/s_c 1.2 {'linear': 0.021, 'learn': 0.034, 'mem': 0.034, 'closed': 0.02}
+  s/s_c 1.3 {'linear': 0.001, 'learn': 0.001, 'mem': 0.001, 'closed': 0.0}
+  s/s_c 1.4 {'linear': 0.0, 'learn': 0.0, 'mem': 0.0, 'closed': 0.0}
+  s/s_c 1.7 {'linear': 0.0, 'learn': 0.0, 'mem': 0.0, 'closed': 0.0}
+  s/s_c 2.0 {'linear': 0.0, 'learn': 0.0, 'mem': 0.0, 'closed': 0.0}
+  eta 0.0 {'linear': 1.0, 'learn': 1.0, 'mem': 1.0, 'operator': 1.0}
+  eta 0.0025 {'linear': 0.687, 'learn': 0.702, 'mem': 0.697, 'operator': 0.687}
+  eta 0.005 {'linear': 0.464, 'learn': 0.489, 'mem': 0.486, 'operator': 0.472}
+  eta 0.01 {'linear': 0.218, 'learn': 0.234, 'mem': 0.234, 'operator': 0.222}
+  eta 0.02 {'linear': 0.046, 'learn': 0.056, 'mem': 0.057, 'operator': 0.049}
+  eta 0.04 {'linear': 0.001, 'learn': 0.002, 'mem': 0.003, 'operator': 0.002}
+  eta 0.08 {'linear': 0.0, 'learn': 0.0, 'mem': 0.0, 'operator': 0.0}

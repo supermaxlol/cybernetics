@@ -72,6 +72,12 @@ import FiveOrgans.CoupledRoles
 import FiveOrgans.CoupledPartial
 import FiveOrgans.CoupledStochastic
 import FiveOrgans.CoupledEndogenous
+import FiveOrgans.SensingRate
+import FiveOrgans.ControlEntropy
+import FiveOrgans.GrowthValue
+import FiveOrgans.KnownStart
+import FiveOrgans.Scrambling
+import FiveOrgans.DataRate
 
 open FiveOrgans
 
@@ -763,3 +769,75 @@ open FiveOrgans
 #print axioms FiveOrgans.CoupledStochastic.nobrake_var_unbounded
 #print axioms FiveOrgans.CoupledStochastic.worst_vs_average
 #print axioms FiveOrgans.CoupledStochastic.sustainable_count
+#print axioms FiveOrgans.SensingRate.exists_cell
+#print axioms FiveOrgans.SensingRate.cell_spec
+#print axioms FiveOrgans.SensingRate.cell_safe
+#print axioms FiveOrgans.SensingRate.count_needed
+#print axioms FiveOrgans.SensingRate.step_iff
+#print axioms FiveOrgans.SensingRate.forever_iff
+#print axioms FiveOrgans.SensingRate.messages_iff
+#print axioms FiveOrgans.SensingRate.bits_forever_iff
+#print axioms FiveOrgans.SensingRate.blind_dies
+#print axioms FiveOrgans.SensingRate.sensor_error_iff
+#print axioms FiveOrgans.SensingRate.critical_error
+#print axioms FiveOrgans.ControlEntropy.ent_eq
+#print axioms FiveOrgans.ControlEntropy.mC_nonneg
+#print axioms FiveOrgans.ControlEntropy.J_zero
+#print axioms FiveOrgans.ControlEntropy.J_eq
+#print axioms FiveOrgans.ControlEntropy.cond_nonneg
+#print axioms FiveOrgans.ControlEntropy.cond_sum
+#print axioms FiveOrgans.ControlEntropy.cond_chain
+#print axioms FiveOrgans.ControlEntropy.ent_mix_ge
+#print axioms FiveOrgans.ControlEntropy.mC_sum
+#print axioms FiveOrgans.ControlEntropy.closed_eq
+#print axioms FiveOrgans.ControlEntropy.touchette_lloyd
+#print axioms FiveOrgans.ControlEntropy.ent_nonneg
+#print axioms FiveOrgans.ControlEntropy.img_nonneg
+#print axioms FiveOrgans.ControlEntropy.img_sum
+#print axioms FiveOrgans.ControlEntropy.openSet_bdd
+#print axioms FiveOrgans.ControlEntropy.touchette_lloyd_sup
+#print axioms FiveOrgans.ControlEntropy.mX_eq_mix
+#print axioms FiveOrgans.ControlEntropy.mi_nonneg
+#print axioms FiveOrgans.ControlEntropy.ent_le_entJ
+#print axioms FiveOrgans.ControlEntropy.mi_le_log_card
+#print axioms FiveOrgans.ControlEntropy.reduction_le_messages
+#print axioms FiveOrgans.ControlEntropy.cnot_tight
+#print axioms FiveOrgans.ControlEntropy.log_four
+#print axioms FiveOrgans.ControlEntropy.same_state_fails
+#print axioms FiveOrgans.GrowthValue.mi_eq
+#print axioms FiveOrgans.GrowthValue.mix_mean
+#print axioms FiveOrgans.GrowthValue.J_le_mC
+#print axioms FiveOrgans.GrowthValue.J_le_mX
+#print axioms FiveOrgans.GrowthValue.mix_dist
+#print axioms FiveOrgans.GrowthValue.mix_survives
+#print axioms FiveOrgans.GrowthValue.value_le_mi
+#print axioms FiveOrgans.GrowthValue.mean_diag
+#print axioms FiveOrgans.GrowthValue.kelly_blind
+#print axioms FiveOrgans.GrowthValue.kelly_cue
+#print axioms FiveOrgans.GrowthValue.kelly_value_eq
+#print axioms FiveOrgans.GrowthValue.indiv_eq
+#print axioms FiveOrgans.GrowthValue.indiv_value_le
+#print axioms FiveOrgans.GrowthValue.log_eight
+#print axioms FiveOrgans.GrowthValue.mi_Jxy
+#print axioms FiveOrgans.GrowthValue.indiv_beats_mi
+#print axioms FiveOrgans.SensingRate.vol_fat
+#print axioms FiveOrgans.SensingRate.hist_congr
+#print axioms FiveOrgans.SensingRate.reach_step
+#print axioms FiveOrgans.SensingRate.grow
+#print axioms FiveOrgans.SensingRate.known_start_iff
+#print axioms FiveOrgans.Scrambling.st_succ
+#print axioms FiveOrgans.Scrambling.st_one
+#print axioms FiveOrgans.Scrambling.hist_clean
+#print axioms FiveOrgans.Scrambling.first_scrambled_fatal
+#print axioms FiveOrgans.Scrambling.scramble_iff
+#print axioms FiveOrgans.Scrambling.wt_nonneg
+#print axioms FiveOrgans.Scrambling.wt_sum
+#print axioms FiveOrgans.Scrambling.wt_clean
+#print axioms FiveOrgans.Scrambling.wt_first
+#print axioms FiveOrgans.Scrambling.separation
+#print axioms FiveOrgans.DataRate.len
+#print axioms FiveOrgans.DataRate.diff
+#print axioms FiveOrgans.DataRate.radius_lower
+#print axioms FiveOrgans.DataRate.R_pos
+#print axioms FiveOrgans.DataRate.zoom
+#print axioms FiveOrgans.DataRate.stabilise_iff

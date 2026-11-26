@@ -1,0 +1,93 @@
+{
+ "c0": {
+  "emerge": {
+   "base": 1.0,
+   "shift": 0.07133333333333333,
+   "base_late": 1.0,
+   "units": 1.0,
+   "cost": 0.0115,
+   "abl_recurrence": 0.0,
+   "abl_y": 0.8791666666666667,
+   "abl_z1": 0.0,
+   "abl_z2": 0.0,
+   "abl_cue": 0.0,
+   "abl_uprev": 0.0,
+   "abl_skin": 0.0
+  },
+  "free": {
+   "base": 1.0,
+   "shift": 0.12166666666666667,
+   "base_late": 1.0,
+   "units": 3.0,
+   "cost": 0.0,
+   "abl_recurrence": 0.028000000000000136,
+   "abl_y": 0.876,
+   "abl_z1": 0.02199999999999991,
+   "abl_z2": 0.0,
+   "abl_cue": 0.0,
+   "abl_uprev": 0.0,
+   "abl_skin": 0.0
+  },
+  "full": {
+   "base": 1.0,
+   "shift": 0.09033333333333333,
+   "base_late": 1.0,
+   "units": 8.0,
+   "cost": 0.248,
+   "abl_recurrence": 0.0,
+   "abl_y": 0.8763333333333333,
+   "abl_z1": 0.0,
+   "abl_z2": 0.0,
+   "abl_cue": 0.0,
+   "abl_uprev": 0.0,
+   "abl_skin": 0.0
+  },
+  "small": {
+   "base": 1.0,
+   "shift": 0.06933333333333333,
+   "base_late": 1.0,
+   "units": 2.0,
+   "cost": 0.044,
+   "abl_recurrence": 0.0,
+   "abl_y": 0.8771666666666667,
+   "abl_z1": 0.0,
+   "abl_z2": 0.0,
+   "abl_cue": 0.0,
+   "abl_uprev": 0.0,
+   "abl_skin": 0.0
+  },
+  "drift": {
+   "base": 0.6991666666666667,
+   "shift": 0.016,
+   "base_late": 0.588,
+   "units": 5.0,
+   "cost": 0.0875,
+   "abl_recurrence": -0.1050000000000001,
+   "abl_y": 0.6255000000000001,
+   "abl_z1": -0.13550000000000006,
+   "abl_z2": -0.26349999999999996,
+   "abl_cue": 0.0,
+   "abl_uprev": 0.0508333333333334,
+   "abl_skin": 0.0
+  },
+  "five": {
+   "base": 1.0,
+   "shift": 0.043333333333333335,
+   "base_late": 1.0,
+   "units": 1.0,
+   "cost": 0.01,
+   "abl_memory": 0.0,
+   "abl_spotlight": 0.0,
+   "abl_watcher": 0.0,
+   "abl_brake": 0.0,
+   "abl_skin": 0.0,
+   "gates": [
+    0,
+    1,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

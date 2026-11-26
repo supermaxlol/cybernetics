@@ -6,7 +6,7 @@ spotlight (limited attention), and how these combine. A second half asks when a 
 macro-level model can stand in for a fine, micro-level one (the cross-scale map φ), and gives
 statistical tests of that, with their error rates proved.
 
-**682 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
+**754 audited theorems, 0 `sorry`, axioms used: only `propext`, `Classical.choice`, `Quot.sound`**
 (see `AXIOM_AUDIT.txt`, produced by `#print axioms` on every theorem listed in
 `FiveOrgans/Audit.lean`).
 
@@ -115,6 +115,12 @@ MemoryRandom.lean       random environment: two look-alike histories with positi
 WatcherDiscerning.lean  compliance q₊/q₋: ignoring wrong flags makes any Watcher harmless; sham helps iff q₊/q₋ beats base odds
 SpotlightNoisy.lean spotlight on estimated relevance: loss ≤ 2Ce; beats uniform iff margin > 2e
 TwoSpeed.lean     one EMA rate can't both track change and ignore noise; two rates can
+SensingRate.lean        counting threshold: some M-message strategy keeps |x| ≤ r forever iff |a|·r + M·d ≤ M·r (`forever_iff`; r = 1 gives M ≥ |a|/(1−d))
+ControlEntropy.lean     Touchette–Lloyd-type bound: closed-loop entropy reduction ≤ best open-loop reduction + mutual information (`touchette_lloyd`)
+GrowthValue.lean        growth with side information ≤ blind growth + mutual information (`value_le_mi`); with individual (not shared) information the gain can exceed it (`indiv_beats_mi`)
+KnownStart.lean         with disturbance d > 0, knowing the start does not lower the threshold (`known_start_iff`)
+Scrambling.lean         adversarial message scrambling survivable iff |a|r + d ≤ r (`scramble_iff`); random scrambling with rate η: counting survives w.p. ≥ (1−η)^(k+1), while if blind survival is impossible every strategy can be held to ≤ 1−η (`separation`)
+DataRate.lean           scalar data-rate theorem, noise-free: uniform stabilisation with M messages iff |a| < M (`stabilise_iff`; lower bound by volume, upper bound by zooming)
 Audit.lean        #print axioms for every theorem
 ```
 
@@ -145,7 +151,8 @@ Pre-registered radCAD and NumPy simulations test the theorems' average-case and 
 versions. No theorem depends on them. Pre-registration timestamps are **local only**: files were
 frozen with `chmod 444` and SHA-256 hashes before each confirm run, and no third party timestamped
 them. `sh analysis/reproduce.sh` checks the hashes and runs the self-tests. `sh analysis/reproduce.sh full`
-reruns every confirm experiment. Pinned versions are in `analysis/requirements.txt`.
+reruns the main confirm experiments (about 26 h on a laptop, almost all of it the stochastic
+confirm). Pinned versions are in `analysis/requirements.txt`.
 
 * `analysis/coupled/`: average-case tests of the 32-configuration results. **Some hypotheses were
   falsified.** Worst-case necessity did not always appear as average-case necessity. See the two
@@ -177,6 +184,24 @@ reruns every confirm experiment. Pinned versions are in `analysis/requirements.t
     two fixed agents tested under regime flips in all 20 cells (an earlier claim that it beats
     every fixed configuration is withdrawn). Corrected 2026-11-25; see
     `RESULTS_coevolution_2026-11-23.md`.
+
+* `analysis/sensing/`: sensor scrambling with the message threshold M* predicted from `SensingRate`
+  **before** any dev output (`PREDICTIONS_before_dev_2026-11-26.md`, hashed). Confirm on three fresh
+  seeds: **4 of 9** predictions passed. M* was exact for learners in three of four cells, but one
+  class-D seed needed M* + 2 (P2 failed), and memory helped nowhere it was predicted to (P3, P5, P6, P8
+  failed). See `RESULTS_sensing_2026-11-26.md`.
+* `analysis/emergence/`: evolved controllers (free, cost-penalised, fixed 8-unit, 2-unit, no-selection
+  drift) against the fixed five-organ architecture in six single-pressure worlds and their mixture.
+  Thresholds were chosen after four dev seeds; confirm on five fresh seeds: **11 of 12** passed.
+  * Only two capacities separated architectures: memory under a hidden actuator sign (ablation
+    costs about 0.8 survival) and the Brake under delay (about 0.9). Elsewhere one unit sufficed.
+  * Evolution in the mixed world never found the memory function (all 20 nets ≤ 0.26 on the hidden
+    sign), which accounts for the five-organ agent's 0.10-0.13 lead there.
+  * **E4 failed**: evolved nets that solved the hidden sign mostly ignored the cue and used an
+    action-outcome memory instead. The naive one-organ-per-pressure mapping was refuted, as
+    predicted (no Watcher needed against a lying sensor, no Skin against bursts).
+  * No arm reorganised within a lifetime after the sign flipped, so recognising that a
+    representation is inadequate was **not** tested. See `RESULTS_emergence_2026-11-26.md`.
 
 Limits: every model is low-dimensional and linear with stated noise. The real-data test uses real
 disturbance paths but a simulated agent. Nothing here validates the theory on a real organism,

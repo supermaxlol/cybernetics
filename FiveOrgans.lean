@@ -73,4 +73,10 @@ import FiveOrgans.CoupledRoles
 import FiveOrgans.CoupledPartial
 import FiveOrgans.CoupledStochastic
 import FiveOrgans.CoupledEndogenous
+import FiveOrgans.SensingRate
+import FiveOrgans.ControlEntropy
+import FiveOrgans.GrowthValue
+import FiveOrgans.KnownStart
+import FiveOrgans.Scrambling
+import FiveOrgans.DataRate
 import FiveOrgans.Audit
